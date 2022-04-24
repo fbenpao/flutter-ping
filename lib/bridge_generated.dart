@@ -11,7 +11,9 @@ import 'dart:typed_data';
 import 'package:flutter_rust_bridge/flutter_rust_bridge.dart';
 import 'dart:ffi' as ffi;
 
-abstract class Native {}
+abstract class Native {
+  Future<String> ping({required String host, required int port, dynamic hint});
+}
 
 class NativeImpl extends FlutterRustBridgeBase<NativeWire> implements Native {
   factory NativeImpl(ffi.DynamicLibrary dylib) =>
@@ -19,13 +21,55 @@ class NativeImpl extends FlutterRustBridgeBase<NativeWire> implements Native {
 
   NativeImpl.raw(NativeWire inner) : super(inner);
 
+  Future<String> ping(
+          {required String host, required int port, dynamic hint}) =>
+      executeNormal(FlutterRustBridgeTask(
+        callFfi: (port_) =>
+            inner.wire_ping(port_, _api2wire_String(host), _api2wire_i64(port)),
+        parseSuccessData: _wire2api_String,
+        constMeta: const FlutterRustBridgeTaskConstMeta(
+          debugName: "ping",
+          argNames: ["host", "port"],
+        ),
+        argValues: [host, port],
+        hint: hint,
+      ));
+
   // Section: api2wire
+  ffi.Pointer<wire_uint_8_list> _api2wire_String(String raw) {
+    return _api2wire_uint_8_list(utf8.encoder.convert(raw));
+  }
+
+  int _api2wire_i64(int raw) {
+    return raw;
+  }
+
+  int _api2wire_u8(int raw) {
+    return raw;
+  }
+
+  ffi.Pointer<wire_uint_8_list> _api2wire_uint_8_list(Uint8List raw) {
+    final ans = inner.new_uint_8_list(raw.length);
+    ans.ref.ptr.asTypedList(raw.length).setAll(0, raw);
+    return ans;
+  }
 
   // Section: api_fill_to_wire
 
 }
 
 // Section: wire2api
+String _wire2api_String(dynamic raw) {
+  return raw as String;
+}
+
+int _wire2api_u8(dynamic raw) {
+  return raw as int;
+}
+
+Uint8List _wire2api_uint_8_list(dynamic raw) {
+  return raw as Uint8List;
+}
 
 // ignore_for_file: camel_case_types, non_constant_identifier_names, avoid_positional_boolean_parameters, annotate_overrides, constant_identifier_names
 
@@ -48,6 +92,40 @@ class NativeWire implements FlutterRustBridgeWireBase {
       ffi.Pointer<T> Function<T extends ffi.NativeType>(String symbolName)
           lookup)
       : _lookup = lookup;
+
+  void wire_ping(
+    int port_,
+    ffi.Pointer<wire_uint_8_list> host,
+    int port,
+  ) {
+    return _wire_ping(
+      port_,
+      host,
+      port,
+    );
+  }
+
+  late final _wire_pingPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Int64, ffi.Pointer<wire_uint_8_list>,
+              ffi.Int64)>>('wire_ping');
+  late final _wire_ping = _wire_pingPtr
+      .asFunction<void Function(int, ffi.Pointer<wire_uint_8_list>, int)>();
+
+  ffi.Pointer<wire_uint_8_list> new_uint_8_list(
+    int len,
+  ) {
+    return _new_uint_8_list(
+      len,
+    );
+  }
+
+  late final _new_uint_8_listPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<wire_uint_8_list> Function(
+              ffi.Int32)>>('new_uint_8_list');
+  late final _new_uint_8_list = _new_uint_8_listPtr
+      .asFunction<ffi.Pointer<wire_uint_8_list> Function(int)>();
 
   void free_WireSyncReturnStruct(
     WireSyncReturnStruct val,
@@ -76,6 +154,13 @@ class NativeWire implements FlutterRustBridgeWireBase {
           'store_dart_post_cobject');
   late final _store_dart_post_cobject = _store_dart_post_cobjectPtr
       .asFunction<void Function(DartPostCObjectFnType)>();
+}
+
+class wire_uint_8_list extends ffi.Struct {
+  external ffi.Pointer<ffi.Uint8> ptr;
+
+  @ffi.Int32()
+  external int len;
 }
 
 typedef DartPostCObjectFnType = ffi.Pointer<

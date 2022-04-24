@@ -13,9 +13,9 @@ dependencies = [
 
 [[package]]
 name = "anyhow"
-version = "1.0.56"
+version = "1.0.57"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4361135be9122e0870de935d7c439aef945b9f9ddd4199a553b5270b49c82a27"
+checksum = "08f9b8508dccb7687a1d6c4ce66b2b0ecef467c94667de27d8d7fe1f8d2a9cdc"
 
 [[package]]
 name = "argh"
@@ -75,9 +75,9 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
 name = "flutter_rust_bridge"
-version = "1.24.0"
+version = "1.27.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "17db7e4ffeecae1478c3a2a49505bc3fb64f21b5374789ea47770e78564115a4"
+checksum = "3edf0e8e08d68704c80e57f7f3c6bdc2faa4ce698cd4ba879321772feec78e7a"
 dependencies = [
  "allo-isolate",
  "anyhow",
@@ -89,9 +89,9 @@ dependencies = [
 
 [[package]]
 name = "flutter_rust_bridge_macros"
-version = "1.24.0"
+version = "1.27.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "800819b8d8ca9d22df8a0ec4fb57dfe39bad5b001d16902f467366b221f5c036"
+checksum = "f7a63ec5d1dd13a666d873dd2535a9a21102e1259e64d24aa60cb909024f695f"
 
 [[package]]
 name = "heck"
@@ -119,9 +119,9 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
 name = "libc"
-version = "0.2.123"
+version = "0.2.124"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cb691a747a7ab48abc15c5b42066eaafde10dc427e3b6ee2a1cf43db04c763bd"
+checksum = "21a41fed9d98f27ab1c6d161da622a4fa35e8a54a8adc24bbf3ddd0ef70b0e50"
 
 [[package]]
 name = "lock_api"
@@ -140,7 +140,6 @@ dependencies = [
  "anyhow",
  "argh",
  "flutter_rust_bridge",
- "libc",
  "socket2",
 ]
 

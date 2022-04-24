@@ -1,0 +1,11 @@
+/Users/myway/flutter-rust/flutter-ping/native/target/aarch64-linux-android/release/deps/allo_isolate-f00fccd649dd6c92.rmeta: /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/lib.rs /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/dart_array.rs /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/into_dart.rs /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/into_dart_extra.rs /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/ffi.rs
+
+/Users/myway/flutter-rust/flutter-ping/native/target/aarch64-linux-android/release/deps/liballo_isolate-f00fccd649dd6c92.rlib: /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/lib.rs /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/dart_array.rs /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/into_dart.rs /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/into_dart_extra.rs /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/ffi.rs
+
+/Users/myway/flutter-rust/flutter-ping/native/target/aarch64-linux-android/release/deps/allo_isolate-f00fccd649dd6c92.d: /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/lib.rs /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/dart_array.rs /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/into_dart.rs /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/into_dart_extra.rs /Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/ffi.rs
+
+/Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/lib.rs:
+/Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/dart_array.rs:
+/Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/into_dart.rs:
+/Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/into_dart_extra.rs:
+/Users/myway/.cargo/registry/src/github.com-1ecc6299db9ec823/allo-isolate-0.1.12/src/ffi.rs:

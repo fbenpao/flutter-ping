@@ -1,0 +1,1 @@
+/Users/myway/flutter-rust/flutter-ping/native/target/armv7-linux-androideabi/release/libnative.rlib: /Users/myway/flutter-rust/flutter-ping/native/src/api.rs /Users/myway/flutter-rust/flutter-ping/native/src/bridge_generated.rs /Users/myway/flutter-rust/flutter-ping/native/src/lib.rs
